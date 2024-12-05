@@ -1,0 +1,1 @@
+This is a web game based on managing resources
