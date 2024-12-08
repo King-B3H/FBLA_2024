@@ -24,6 +24,18 @@
                     </tr>
                 </table>
             </div>
+
+
+            <div id="days">
+                <div class="currencyText">
+                    <h3 style="padding:100" id="timeText">You are on Day <span id="daysPlayed"></span>  </h3><img src="Assets/Money.png"width="65" alt="Cash Image"/>
+                    <button onclick="nextDay()">Next Day</button>
+                </div>
+                
+                <button onclick="askCash()">Want free mone!?</button>
+                
+            </div>
+
             <div id="sideBar" style="border:3px solid black">
                 <div>
                     <button class="imgButton" onclick="changeSubTab('investorSubtab')">
@@ -31,6 +43,9 @@
                     </button>
                     <button class="imgButton" onclick="changeSubTab('resourceSubtab')">
                         <div class="imgButton"><h3 style="padding:100">Resources </h3><img src="Assets/Money.png" width="20" alt="Resource Image"/></div>
+                    </button>
+                    <button class="imgButton" onclick="changeSubTab('stockSubtab')">
+                        <div class="imgButton"><h3 style="padding:100">Stocks </h3><img src="Assets/Money.png" width="20" alt="Stocks Image"/></div>
                     </button>
                 </div>
             </div>
@@ -57,6 +72,9 @@
 
                 <div id="resourceSubtab">
                     <h2>Manage your resources!</h2>
+                </div>
+                <div id="resourceSubtab">
+                    <h2>Manage your stocks!</h2>
                 </div>
             </div>
             <div id="saveDiv">

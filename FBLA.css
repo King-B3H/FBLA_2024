@@ -25,6 +25,9 @@ img{
     display:flex;
     align-items: center;
 }
+#timeText{
+    text-shadow: white 2px 0 10px;
+}
 #saveDiv{
     bottom:0%;
     left:0%;
