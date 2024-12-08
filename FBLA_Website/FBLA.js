@@ -46,11 +46,12 @@ setInterval(function() { //Saves game every 10 seconds
 
 var investor = {
     names: [
-        "Primary Workforce Investor"
+        "Financial Investor",
+        "Workforce Investor",
     ],
     updateDisplay: function(){
         for(i=0;i < this.names.length;i++){
-            x = document.getElementById("investorDisplay").innerHTML = `<button><h4><img src='Assets/Investor_Head.png' width='10px' height='auto'/>${this.names[i]}</h4></button>`
+            x = document.getElementById("investorDisplay").innerHTML = `<td><button><h4><img src='Assets/Investor_Head.png' width='10px' height='auto'/>${this.names[i]}</h4></button></td>`
         }
     },
 }
