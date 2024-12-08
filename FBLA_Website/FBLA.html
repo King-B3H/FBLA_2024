@@ -1,0 +1,57 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>FBLA</title>
+        <link rel="stylesheet" href="FBLA.css"> 
+        <link rel="icon" href="Assets/favicon.jpeg">
+        <link href='https://fonts.googleapis.com/css?family=Varela Round' rel='stylesheet'>
+
+    </head>
+    <body>
+        <div id="gameBody">
+            <h1>FBLA Game</h1>
+            <div id="resourceDiv">
+                <table id="resourceTable">
+                    <tr>
+                        <td>
+                            <div class="currencyText">
+                                <h3 style="padding:100" class="cashText">You have <span id="playerCash"></span> Cash  </h3><img src="Assets/Money.png"width="65" alt="Cash Image"/>
+                            </div>
+                            <div class="currencyText">
+                                <h3 style="padding:100" class="cashText">You are gaining <span id="playerCashGain"></span> Cash/s  </h3><img src="Assets/Money.png"width="65" alt="Cash Image"/>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div id="sideBar" style="border:3px solid black">
+                <div>
+                    <button class="imgButton" onclick="changeSubTab('investorSubtab')">
+                        <div class="imgButton"><h3 style="padding:100">Investors </h3><img src="Assets/Investor_Head.png" width="30" alt="Investor Head Image"/></div>
+                    </button>
+                    <button class="imgButton" onclick="changeSubTab('resourceSubtab')">
+                        <div class="imgButton"><h3 style="padding:100">Resources </h3><img src="Assets/Money.png" width="20" alt="Resource Image"/></div>
+                    </button>
+                </div>
+            </div>
+            <div id="contentSection">
+                <div id="investorSubtab" width="100">
+                        <h2 >Manage your investments!</h2>
+                    <span id="investorDisplay">Test</span>
+                </div>
+
+                <div id="resourceSubtab">
+                    <h2>Manage your resources!</h2>
+                </div>
+            </div>
+            <div id="saveDiv">
+                <button onclick="saveGame()">Save Game</button>
+                <button onclick="resetGame()">Reset Game</button>
+            </div>
+        </div>
+    </body>
+</html>
+
+
+<script src="FBLA.js">
+    </script>

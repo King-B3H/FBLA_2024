@@ -1,0 +1,83 @@
+body{
+    background-image:radial-gradient(circle, rgb(113, 113, 239), rgb(78, 132, 234));
+    cursor:default;
+    font-family: 'Varela Round';
+    text-decoration: none;
+    user-select: none;
+}
+
+h1{
+    text-shadow: #FC0 2px 0 10px;
+    font-weight: 600;
+}
+.cashText{
+    text-shadow: rgb(9, 122, 34) 2px 0 10px;
+}
+.imgButton{
+    align-items: center;
+    display:flex;
+    width:100%;
+}
+img{
+    -webkit-user-drag: none;
+}
+.currencyText{
+    display:flex;
+    align-items: center;
+}
+#saveDiv{
+    bottom:0%;
+    left:0%;
+    position:absolute;
+}
+button{
+    font-family: 'Varela Round';
+    font-size: medium;
+    background-color:transparent;
+    border:2px solid black;
+    width:150px;
+    height:45px;
+}
+
+#sideBar{
+    display:auto;
+    position:absolute;
+    right:0%;
+    top:0%;
+    height:100%;
+    width:10%;
+    text-align:center;
+}
+
+#contentSection{
+    display:auto;
+    position:absolute;
+    right:35%;
+    top:0%;
+    height:100%;
+    text-align:center;
+}
+
+#resourceSubtab{
+    display:none;
+    position:absolute;
+    justify-content: center;
+    text-align:center;
+    align-content: center;
+    font-size:x-small;
+    height: fit-content;
+    width:fit-content;
+    background-color: gray;
+}
+#investorSubtab{
+    display:block;
+    position:absolute;
+    justify-content: center;
+    text-align:center;
+    align-content: center;
+    font-size:x-small;
+    height: fit-content;
+    width:fit-content;
+    background-color: blue;
+    z-index:5
+}

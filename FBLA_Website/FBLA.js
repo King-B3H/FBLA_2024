@@ -1,27 +1,59 @@
 var cash = 0
+var cashGainBase = 1
+var cashGainMulti = 1
 
 function updateCash(){
     document.getElementById("playerCash").innerHTML = cash
+    document.getElementById("playerCashGain").innerHTML = cashGainBase * cashGainMulti
 }
 
-function incrementCash(){
-    cash++
+function generationTick(){
+    cash += cashGainBase * cashGainMulti
 }
 
 
-
+function changeSubTab(newTab) {
+    alert(`Subtab Changed to ${newTab}`)
+    var subTabNames = ["investorSubtab", "resourceSubtab"];
+  
+    for (i = 0; i < subTabNames.length; i++) {
+      if (subTabNames[i] !== newTab) {
+        document.getElementById(subTabNames[i]).style.display = "none";
+      }
+      if (subTabNames[i] == newTab) {
+        document.getElementById(subTabNames[i]).style.display = "block";
+      }
+    }
+}
 
 function gameTick(){ //Global tick
     updateCash()
+    investor.updateDisplay()
+    
 }
 
 setInterval(function () { //Function that will run every milisecond
   gameTick();
-}, 100);
+}, 10);
+
+setInterval(function () {
+    generationTick()
+}, 1000)
 
 setInterval(function() { //Saves game every 10 seconds
   saveGame()
 }, 10000)
+
+var investor = {
+    names: [
+        "Primary Workforce Investor"
+    ],
+    updateDisplay: function(){
+        for(i=0;i < this.names.length;i++){
+            x = document.getElementById("investorDisplay").innerHTML = `<button><h4><img src='Assets/Investor_Head.png' width='10px' height='auto'/>${this.names[i]}</h4></button>`
+        }
+    },
+}
 
 //Below this is the code to save and load the game as well as reset it
 
