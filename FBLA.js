@@ -13,7 +13,6 @@ function generationTick(){
 
 
 function changeSubTab(newTab) {
-    alert(`Subtab Changed to ${newTab}`)
     var subTabNames = ["investorSubtab", "resourceSubtab"];
   
     for (i = 0; i < subTabNames.length; i++) {
@@ -48,10 +47,11 @@ var investor = {
     names: [
         "Financial Investor",
         "Workforce Investor",
+        "Testing Investor"
     ],
     updateDisplay: function(){
         for(i=0;i < this.names.length;i++){
-            x = document.getElementById("investorDisplay").innerHTML = `<td><button><h4><img src='Assets/Investor_Head.png' width='10px' height='auto'/>${this.names[i]}</h4></button></td>`
+            document.getElementById("investor" + i-1 + "Text").innerHTML = `<h4><img src='Assets/Investor_Head.png' width='10px' height='auto'/>${this.names[i]}</h4></button>`
         }
     },
 }
